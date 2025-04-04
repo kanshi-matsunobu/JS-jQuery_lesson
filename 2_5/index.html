@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>if文</title>
+  <link rel="stylesheet" href="base.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#button').click(function() {
+        var inputValue = $('#value').val();
+
+        $('#box').removeClass('red green blue'); // 前の色をリセット
+
+        if (inputValue === "1") {
+          $('#box').addClass('red');
+        } else if (inputValue === "2") {
+          $('#box').addClass('green');
+        } else if (inputValue === "3") {
+          $('#box').addClass('blue');
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <input type="text" id="value">
+  <input type="button" id="button" value="ボタン">
+  <div id="box"></div>
+</body>
+</html>
